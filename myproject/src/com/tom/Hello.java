@@ -7,18 +7,16 @@ public class Hello {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Scanner scanner =new Scanner(System.in);
+		/*Scanner scanner =new Scanner(System.in);
 		System.out.print("Your name:");
 		String aaa=scanner.nextLine();
-		System.out.println(aaa);
+		System.out.println(aaa);*/
 		
 		
 		
-
-		
-		Person p=new Person(63.6f,1.74f);
-		System.out.println(p.bmi());
-		p.hello();
+		Person person= new Person("hank",63.6f,1.74f);
+		System.out.println(person.bmi());
+		person.hello();
 		
 		Student stu=new Student("hank",70,90);
 		/*stu.name="hank";
