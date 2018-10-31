@@ -20,24 +20,21 @@ public class Practice {
 				Random random=new Random();
 				int secret=random.nextInt(100)+1;
 				Scanner scanner =new Scanner(System.in);
+				int high=100;
+				int low =1;
 				while(true) {
 					int guess =scanner.nextInt();
-					if(guess>secret) {
-						System.out.println(1+"~"+guess);
-						
-					}
-					else if(guess<secret) {
-						System.out.println(guess+"~"+100);
-					}
-					else if(guess<100) {
-						System.out.println(guess+"~"+guess);
-					}
-					else if(guess>1) {
-						System.out.println(guess+"~"+guess);
-					}
-					else{
+					 if (guess==secret) {
 						System.out.println("bingo");
 					}
+					else {
+						if(guess>=low&&guess<secret)  low=guess;
+						if(guess>secret&&guess<high)  high=guess;
+						System.out.println(low+"~"+high);
+					}
+					
+					
+					
 					
 				}
 			
