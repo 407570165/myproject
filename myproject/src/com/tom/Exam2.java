@@ -9,23 +9,24 @@ public class Exam2 {
 		// TODO Auto-generated method stub
 		Scanner scanner =new Scanner(System.in);
 		Random random=new Random();
-		Secret secret=new Secret();
-		int msecret =random.nextInt(10+1);
-			while(true) {
-				System.out.println("Your guess:");
-				 int guess =scanner.nextInt();
-				if(secret.diff(guess)>0) {
-					 System.out.println("higher");
-			    if(secret.diff(guess)<0) {
-					 System.out.println("lower");
-					 }
-					else {
-						System.out.println("Great! the secret nmber is:"+secret);
-					    
-					}
-					
-				 }
+		int secret=random.nextInt(10)+1;
+		while(true){
+			System.out.println("your guess");
+			int guess=scanner.nextInt();
+			if(guess>secret){
+				System.out.println("lower");
 			}
+			if(guess<secret){
+				System.out.println("higher");
+			}
+			else{
+				System.out.println("great");
+					break;
+			}
+		
+				
 		}
+		}
+	
 	
 	}

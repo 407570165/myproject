@@ -3,8 +3,8 @@ package com.tom;
 public class Student {
 
 	String name="hank";
-	int english=70;
-	int math=90;
+	int english;
+	int math;
 	
 	public Student(String name,int english,int math){
 		this.name=name;
@@ -16,9 +16,34 @@ public class Student {
 	
 	
 	public void print(){
-		System.out.println(name+"\t"+english+"\t"+math+"\t"+(english+math)/2);
-		
+		System.out.print(name+"\t"+english+"\t"+math+"\t"+average()+"\t"+
+	highest()+"\t");
+		if (average()>60){
+			System.out.println("pass");
+		}
+		else{
+			System.out.println("failed");
+			char grading='F';
+			int gAverage=average();
+			switch(gAverage/10){
+			case 10:
+			case 9:
+				grading='A';
+			}
+		}
 	}
+	public int average(){
+		return (english+math)/2;
+	}
+	public int highest (){
+		if (math>english){
+			return math;
+	}
+		else{
+			return english;
+		}
+		
+		
 	
-	
+}
 }
