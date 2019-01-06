@@ -5,6 +5,7 @@ public class Student {
 	String name="hank";
 	int english;
 	int math;
+	char c ='\t';
 	
 	public Student(String name,int english,int math){
 		this.name=name;
@@ -27,8 +28,10 @@ public class Student {
 			int gAverage=average();
 			switch(gAverage/10){
 			case 10:
+				break;
 			case 9:
 				grading='A';
+				break;
 			}
 		}
 	}
